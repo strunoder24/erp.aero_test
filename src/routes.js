@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === 'production') mode = 'history';
 
 
 const routes = [
-    { path: '/', component: () => import('~p/index.vue'), name: 'index'},
+    { path: '/', component: () => import('~v/index.vue'), name: 'index'},
 ];
 
 

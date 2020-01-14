@@ -49,7 +49,7 @@ module.exports = env => {
                         ]
                     },
                     {
-                        test: /\.sass$/,
+                        test: /\.scss$/,
                         exclude: /\.module.(scss)$/,
                         loader: [
                             isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -161,7 +161,7 @@ module.exports = env => {
                     '~':  path.resolve(__dirname, '../src'),
                     '~c': path.resolve(__dirname, '../src/components'),
                     '~h': path.resolve(__dirname, '../src/helpers'),
-                    '~p': path.resolve(__dirname, '../src/pages'),
+                    '~v': path.resolve(__dirname, '../src/views'),
                     '~s': path.resolve(__dirname, '../src/store'),
                     '~a': path.resolve(__dirname, '../src/assets')
                 }
