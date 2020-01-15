@@ -25,7 +25,7 @@
 </template>
 
 <script>
-    import config from '~/config';
+    import config from './config';
     import { divideByThousands } from '~a/helpers'
     
     export default {

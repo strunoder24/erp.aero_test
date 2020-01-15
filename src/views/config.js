@@ -81,7 +81,7 @@ export default {
     
         {
             enable: true,
-            operationName: 'Посчитать разность',
+            operationName: 'Посчитать частное',
             operationSymbol: '/',
         
             calculateResult (){
