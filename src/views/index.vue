@@ -89,13 +89,7 @@
                     this.calculateResult();
                 }
             },
-    
-            // Вспомогательная функция для лучшего UX
-            getResult(){
-                if (typeof this.result === 'number') return divideByThousands(this.result);
-                else return this.result;
-            },
-    
+            
             // Проверка есть ли активные хэндлеры во внешнем файле
             hasAnyActiveHandlers(){
                 return config.modes.some((el) => {
@@ -103,11 +97,19 @@
                 })
             },
     
+            // Функция для клавиши enter. С её помощью можно с клавиатуры запускать расчёт не кликая по кнопке.
+            // при этом отрабатывает функция которая была использованна в последний раз
             enterKeyHandler(){
                 if (this.hasExternalHandlers) this.handleButtonPress(this.buttons.find(el => {
                     return el.operationSymbol === this.operationSymbol;
                 }));
                 else this.calculateResult()
+            },
+    
+            // Вспомогательная функция для лучшего UX
+            getResult(){
+                if (typeof this.result === 'number') return divideByThousands(this.result);
+                else return this.result;
             },
     
             // Вспомогательная функция для лучшего UX
